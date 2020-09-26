@@ -1,0 +1,48 @@
+// stylelint-disable declaration-no-important
+
+.bg-darken {
+  background-color: darken($dark, 13%) !important;
+}
+
+.bg-light {
+  background-color: #f3f3f3 !important;
+}
+
+.bg-lighten {
+  background-color: #f7f7f7 !important;
+}
+
+.bg-default {
+  background-color: #f3f3f3;
+}
+
+// Video background
+.bg-video {
+  position: relative;
+  overflow: hidden;
+  background-color: $dark;
+
+  &-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border: 0;
+    opacity: .5;
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  .container-fluid {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+}

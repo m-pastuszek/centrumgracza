@@ -1,0 +1,33 @@
+// Modal
+.modal {
+  &-header {
+    background-color: #fafafa;
+  }
+
+  &-title {
+    font-weight: $font-weight-bold;
+  }
+
+  .modal-body .separator {
+    span {
+      background-color: $white;
+    }
+  }
+}
+
+// Variations
+@each $color, $value in $theme-colors {
+  .modal-#{$color} {
+    .modal-header {
+      background-color: $value;
+    }
+
+    .modal-title {
+      color: $white;
+    }
+
+    .close {
+      text-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+// Display title
+.display-title {
+  margin-bottom: 35px;
+  font-size: 70px;
+  text-shadow: 3px 1px 0 $primary;
+}
+
+// Pagination
+.page-item.gap {
+  .page-link {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+// Blockquote
+.blockquote {
+  padding: 25px 30px;
+  color: #545454;
+  background-color: #efefef;
+
+  p {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: $font-weight-semibold;
+
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+// Cursor pointer
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Link
+.link {
+  color: $primary;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Mark
+mark {
+  color: $mark-color;
+}
+
+// Height
+.h-calc-100 {
+  height: calc(100vh);
+}
+
+.h-0 {
+  height: 0;
+}

@@ -1,0 +1,134 @@
+// Site footer
+.site-footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 55px 0 0;
+  font-size: $font-size-md;
+  font-weight: $font-weight-light;
+  color: rgba($white, .45);
+
+  @include media-breakpoint-down(xs) {
+    padding: 35px 5px 0;
+  }
+
+  &.bg-dark {
+    label,
+    p,
+    a {
+      color: rgba($white, .45);
+    }
+
+    a:hover {
+      color: $white;
+    }
+  }
+
+  .custom-control-label::after,
+  .custom-control-label::before {
+    top: 1px;
+  }
+
+  .footer-title {
+    margin-bottom: 20px;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $white;
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+// Footer tags
+.footer-tags {
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px 8px 0;
+    font-size: $font-size-md;
+    border: 1px solid rgba($white, .1);
+    @include border-radius(3px);
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba($white, .02);
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin: 8px 2px 0 0;
+    }
+  }
+}
+
+// Footer social
+.footer-social {
+  margin: 0 -.45rem;
+
+  a {
+    display: inline-block;
+    padding: 0 .45rem;
+    font-size: $font-size-base;
+    color: rgba($white, .8);
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgba($white, .08);
+
+    a {
+      /* stylelint-disable-next-line */
+      color: rgba($white, .9) !important;
+    }
+  }
+}
+
+// Footer bottom
+.footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin-top: 55px;
+  border-top: 1px solid rgba($white, .05);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    border: 0;
+  }
+}
+
+// Footer links
+.footer-links {
+  > a {
+    display: inline-block;
+    margin: 0 15px 13px 0;
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .footer-copyright {
+    text-align: center;
+  }
+}
+
+// Sticky footer
+.sticky-footer {
+  .site-content {
+    padding-bottom: 415px;
+  }
+
+  .site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 415px;
+  }
+}

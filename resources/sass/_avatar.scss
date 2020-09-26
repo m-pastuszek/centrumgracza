@@ -1,0 +1,200 @@
+// Avatar
+.avatar {
+  @include border-radius($avatar-radius);
+  @include avatar-size($avatar-size);
+}
+
+// Avatar thumbnail
+.avatar-thumbnail {
+  padding: $thumbnail-padding;
+  background-color: $thumbnail-bg;
+  border: $thumbnail-border-width solid $thumbnail-border-color;
+  @include border-radius($thumbnail-border-radius);
+  @include box-shadow($thumbnail-box-shadow);
+  @include transition(all .15s ease-in-out);
+
+  &.position-absolute {
+    z-index: 1;
+    margin-top: -30px;
+  }
+
+  &.avatar-md,
+  &.avatar-sm,
+  &.avatar-xs {
+    padding: $thumbnail-padding - 1.75;
+  }
+}
+
+// Avatar tile
+.avatar-tile {
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  @include transition($transition-base);
+
+  img {
+    margin-right: 13px;
+    @include border-radius(4px);
+    @include avatar-size($avatar-size-sm);
+  }
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+// Avatar card
+.avatar-card {
+  display: flex;
+  align-items: center;
+  min-width: 15rem;
+  padding: 5px 5px 5px 25px;
+  text-align: left;
+  background-color: $white;
+  border: 1px dashed rgba($black, .2);
+  border-left: 3px solid $primary;
+  @include border-radius(50px);
+
+  img {
+    margin-left: auto;
+    @include border-radius(50%);
+    @include transition($transition-base);
+    @include avatar-size($avatar-size-md);
+  }
+
+  .avatar-title {
+    font-size: 17px;
+    font-weight: $font-weight-semibold;
+  }
+
+  .avatar-text {
+    margin: 0;
+    font-size: $font-size-md;
+  }
+
+  &:hover {
+    border-color: $primary;
+
+    img {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Avatar stack
+.avatar-stack {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    position: relative;
+    z-index: 2;
+    margin-left: -16px;
+    cursor: pointer;
+    @include border-radius(50%);
+    @include avatar-size($avatar-size-stack);
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &-text {
+      margin-left: 10px;
+
+      a {
+        display: inline-block;
+        float: none;
+        margin: 0;
+        font-weight: $font-weight-bold;
+        color: rgba($black, .65);
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// Avatar badge
+.avatar-badge {
+  position: relative;
+  @include avatar-size($avatar-size-md);
+
+  img {
+    @include border-radius(50%);
+  }
+
+  .badge {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    z-index: 1;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+    @include border-radius(50%);
+    box-shadow: 0 0 0 2px $white;
+
+    &:empty {
+      right: 5px;
+      bottom: 2px;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &.transparent .badge {
+    box-shadow: 0 0 0 2px $body-bg;
+  }
+
+  &.avatar-sm {
+    .badge:empty {
+      right: 4px;
+      bottom: 0;
+    }
+  }
+
+  &.avatar-change {
+    width: 5.5rem;
+    height: 5.5rem;
+
+    .badge:empty {
+      right: 10px;
+      bottom: 5px;
+    }
+  }
+}
+
+// Avatar size
+.avatar-xl {
+  @include avatar-size($avatar-size-xl);
+}
+
+.avatar-lg {
+  @include avatar-size($avatar-size-lg);
+}
+
+.avatar-md {
+  @include avatar-size($avatar-size-md);
+}
+
+.avatar-sm {
+  @include avatar-size($avatar-size-sm);
+}
+
+.avatar-xs {
+  @include avatar-size($avatar-size-xs);
+}
+
+.is-sticky {
+  .avatar-tile {
+    /* stylelint-disable-next-line declaration-no-important */
+    bottom: 6px !important;
+  }
+
+  .avatar-thumbnail {
+    margin-top: -300px;
+  }
+}

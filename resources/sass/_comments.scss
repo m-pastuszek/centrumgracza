@@ -1,0 +1,99 @@
+// Comments
+.comments {
+  .media {
+    padding-bottom: 30px;
+    margin-top: 35px;
+    border-bottom: 1px solid rgba($black, .08);
+
+    &:first-child {
+      margin-top: 15px;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .media:last-child {
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      .media-tools {
+        display: block;
+      }
+
+      .media .media-tools {
+        display: none;
+      }
+    }
+
+    .media:hover {
+      .media-tools {
+        display: block;
+      }
+    }
+
+    .avatar {
+      margin-right: 25px;
+      @include avatar-size($avatar-size-md);
+
+      img {
+        @include border-radius(50%);
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-right: 13px;
+        @include avatar-size($avatar-size-md / 1.425);
+
+        .badge:empty {
+          bottom: -2px;
+        }
+      }
+    }
+
+    &-meta {
+      display: inline-block;
+      font-size: $font-size-sm;
+      color: lighten($body-color, 10%);
+
+      &::before {
+        display: inline-block;
+        margin: 0 6px;
+        content: "\2022";
+      }
+
+      i {
+        position: relative;
+        top: 1px;
+        margin-right: 2px;
+      }
+    }
+
+    &-tools {
+      display: none;
+      margin-left: auto;
+
+      a {
+        padding-top: 0 !important; // stylelint-disable-line declaration-no-important
+        padding-bottom: 0 !important; // stylelint-disable-line declaration-no-important
+        border-right: 1px solid rgba($black, .1);
+
+        &:focus,
+        &:hover {
+          border-right: 1px solid rgba($black, .1);
+        }
+
+        &:last-child {
+          border: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .media {
+        margin-left: -35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// stars
+.star {
+  i {
+    margin-right: 2px;
+    line-height: inherit;
+  }
+
+  .text-muted {
+    color: #d0d0d0;
+  }
+}
+
+.star-group {
+  @include clearfix;
+  float: left;
+
+  .btn {
+    float: right;
+    padding: 0;
+    color: #d0d0d0;
+
+    i {
+      margin: 0;
+    }
+
+    &:active,
+    &.active,
+    &:focus,
+    &:hover {
+      color: $warning;
+
+      ~ .btn {
+        color: $warning;
+      }
+    }
+  }
+}

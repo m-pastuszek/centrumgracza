@@ -1,0 +1,26 @@
+// Countdown
+.countdown {
+  font-size: 30px;
+
+  div {
+    display: inline-block;
+    padding: 16px;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: $font-weight-light;
+    color: rgba($white, .55);
+    background-color: darken($dark, 3%);
+
+    span {
+      display: block;
+      font-size: 40px;
+      font-weight: $font-weight-bold;
+      color: rgba($white, .95);
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 10px;
+      margin: 0;
+    }
+  }
+}

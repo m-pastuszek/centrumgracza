@@ -1,0 +1,29 @@
+// Breadcrumb item
+.breadcrumb-item {
+  font-size: $font-size-md;
+  color: $breadcrumb-item-color;
+
+  + .breadcrumb-item::before {
+    font-family: $font-family-icon;
+    font-size: $breadcrumb-content-size;
+    content: $ya-small-right;
+  }
+}
+
+// Variations
+@each $color, $value in $theme-colors {
+  @if $color != "default" and $color != "light" {
+    .bg-#{$color} {
+      .breadcrumb-item a,
+      .breadcrumb-item a:hover,
+      .breadcrumb-item::before {
+        font-weight: $font-weight-semibold;
+        color: $white;
+      }
+
+      .breadcrumb-item.active {
+        color: rgba($white, .8);
+      }
+    }
+  }
+}

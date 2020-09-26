@@ -1,0 +1,64 @@
+// Review
+.review {
+  &-score {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: $white;
+    text-align: center;
+    background-color: rgba($white, .05);
+    border: 1px dashed rgba($white, .4);
+    @include border-radius(50%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &-positive,
+  &-negative {
+    h5 {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      position: relative;
+      padding: 0 0 0 25px;
+      color: $text-light;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 5px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          font-family: $font-family-icon;
+        }
+      }
+    }
+  }
+
+  &-positive {
+    li::before,
+    h5 {
+      color: $success;
+    }
+
+    li::before {
+      content: $ya-check;
+    }
+  }
+
+  &-negative {
+    li::before,
+    h5 {
+      color: $danger;
+    }
+
+    li::before {
+      content: $ya-minus;
+    }
+  }
+}

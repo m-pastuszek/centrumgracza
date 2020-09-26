@@ -1,0 +1,75 @@
+// List group
+.list-group-item {
+  display: flex;
+  align-items: center;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+
+  &:hover {
+    color: $body-color;
+    background-color: $list-group-active-bg;
+    border-color: $list-group-active-border-color;
+  }
+
+  > i {
+    margin-right: 10px;
+  }
+
+  .badge {
+    padding: 5px 7px;
+    margin-left: auto;
+  }
+}
+
+// List group lg
+.list-group-lg .list-group-item {
+  padding-top: $list-group-item-lg-padding-y;
+  padding-bottom: $list-group-item-lg-padding-y;
+}
+
+// List group posts
+.list-group-posts {
+  .list-group-item {
+    display: flex;
+    align-items: start;
+    padding: 12px 0;
+    background-color: transparent;
+    border-style: dashed;
+    border-width: 0 0 1px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &-meta {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      color: rgba($black, .58);
+    }
+
+    &-img {
+      width: 150px;
+      height: 100px;
+      margin-right: 10px;
+      @include img-cover;
+    }
+  }
+
+  &.list-group-lg {
+    .list-group-item {
+      &-img {
+        width: 200px;
+        height: 110px;
+      }
+    }
+  }
+
+  &.list-group-sm {
+    .list-group-item {
+      &-img {
+        width: 100px;
+        height: 80px;
+      }
+    }
+  }
+}

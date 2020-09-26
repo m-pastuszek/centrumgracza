@@ -1,0 +1,40 @@
+// Notify
+.notify {
+  position: fixed;
+  top: 6px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+
+  .alert {
+    display: inline-block;
+  }
+}
+
+// Notify positions
+.notify-left {
+  justify-content: flex-start;
+}
+
+.notify-right {
+  justify-content: flex-end;
+}
+
+.notify-bottom {
+  top: auto;
+  bottom: 10px;
+
+  &-left {
+    top: auto;
+    bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  &-right {
+    top: auto;
+    bottom: 10px;
+    justify-content: flex-end;
+  }
+}

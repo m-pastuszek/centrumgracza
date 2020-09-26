@@ -1,0 +1,21 @@
+// Alert light
+.alert-light {
+  @include alert-variant($alert-light-bg, $alert-light-border, $alert-light-color);
+}
+
+// Alert dark
+.alert-dark {
+  @include alert-variant($alert-dark-bg, $alert-dark-border, $alert-dark-color);
+}
+
+// Alert secondary
+.alert-secondary {
+  @include alert-variant($alert-secondary-bg, $alert-secondary-border, $alert-secondary-color);
+}
+
+// Alert darken
+@each $color, $value in $theme-colors {
+  .alert-darken-#{$color} {
+    @include alert-variant(theme-color-level($color, $alert-darken-bg-level), theme-color-level($color, $alert-darken-border-level), theme-color-level($color, $alert-darken-color-level));
+  }
+}

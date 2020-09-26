@@ -1,0 +1,134 @@
+// stylelint-disable declaration-no-important
+
+// Example
+.example {
+  .btn,
+  .badge {
+    margin-bottom: 5px;
+  }
+
+  .blockquote,
+  .pagination,
+  table,
+  .alert:last-child,
+  .accordion,
+  .card {
+    margin-bottom: 0;
+  }
+
+  .reaction {
+    margin-top: 0;
+  }
+}
+
+// Docs icons
+.docs-icons {
+  margin: 0 -15px;
+
+  i {
+    margin: 15px;
+    font-size: 24px;
+    color: darken($body-color, 5%);
+  }
+}
+
+// Bootstrap select
+.bootstrap-select .dropdown-toggle:focus {
+  outline: 0 !important;
+}
+
+// Icon sizes
+.ya-md { font-size: 24px; }
+.ya-lg { font-size: 32px; }
+.ya-xl { font-size: 48px; }
+
+// Social icons
+.social-links {
+  a {
+    padding: 0 8px;
+    color: lighten($white, 40%);
+  }
+}
+
+// Icon
+.icon {
+  display: inline-block;
+  width: $icon-width;
+  height: $icon-height;
+  margin-bottom: 20px;
+  font-size: $icon-font-size;
+  line-height: $icon-line-height !important;
+  color: $primary;
+  text-align: center;
+  border: 3px solid $primary;
+  @include border-radius(50%);
+}
+
+// Subtitle
+.subtitle {
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  border-left: 3px solid $primary;
+
+  span {
+    display: block;
+    margin-top: 5px;
+    font-size: $font-size-md;
+    font-weight: $font-weight-normal;
+    color: lighten($body-color, 14%);
+  }
+}
+
+// Shadow
+.box-shadow {
+  box-shadow: $box-shadow;
+}
+
+// Separator
+.separator {
+  position: relative;
+  z-index: 1;
+  margin: 15px 0;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    padding: 0 12px;
+    background-color: $body-bg;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: #ececec;
+    }
+  }
+}
+
+// Fix pagination
+.pagination {
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(xs) {
+    .page-link {
+      padding: .5rem .65rem;
+    }
+  }
+}
+
+.index-2 {
+  z-index: 2;
+}
+
+@include media-breakpoint-down(xs) {
+  .px-xs-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

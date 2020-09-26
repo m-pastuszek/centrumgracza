@@ -1,0 +1,48 @@
+// stylelint-disable declaration-no-important
+
+// Figure
+.figure {
+  position: relative;
+  padding: 8px;
+  margin: 0 0 5px;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid rgba($black, .13);
+  @include border-radius(6px);
+  @include transition($transition-base);
+
+  img {
+    margin: 0;
+    @include border-radius(3px);
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+
+// Img cover
+.img-cover {
+  @include img-cover;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+  @include transition($transition-base);
+
+  @include hover {
+    filter: grayscale(0);
+  }
+}
+
+// Img reset
+.img-auto {
+  position: inherit !important;
+  object-fit: inherit !important;
+  height: auto !important;
+
+  img {
+    position: inherit !important;
+    object-fit: inherit !important;
+  }
+}

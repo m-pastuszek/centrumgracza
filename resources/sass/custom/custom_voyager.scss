@@ -1,0 +1,21 @@
+@import "~flatpickr/dist/flatpickr.min.css";
+@import "~switchery/switchery";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/variables";
+
+@import "~awesome-bootstrap-checkbox";
+
+
+.abc-checkbox input[type="checkbox"]:checked+label::after,
+.abc-checkbox input[type="radio"]:checked+label::after {
+  font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+}
+

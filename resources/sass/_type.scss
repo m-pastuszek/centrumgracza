@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast; // stylelint-disable-line value-no-vendor-prefix
+  max-width: 100%;
+}
+
+button {
+  outline: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.site {
+  position: relative;
+  min-height: 100%;
+}
+
+.lead {
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-base;
+  }
+
+  @include media-breakpoint-down(lg) {
+    br {
+      display: none;
+    }
+  }
+}

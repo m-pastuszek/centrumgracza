@@ -1,0 +1,10 @@
+// Lazyload
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  @include transition(opacity 300ms);
+}

@@ -1,0 +1,40 @@
+// stylelint-disable selector-class-pattern
+
+// noUi slider
+.noUi {
+  &-handle {
+    background-color: $white;
+    border: 8px solid $primary;
+    box-shadow: none;
+    @include border-radius(50%);
+  }
+
+  &-target {
+    background-color: #e0e0e0;
+    border: 0;
+    box-shadow: none;
+    @include border-radius(30px);
+  }
+
+  &-connect {
+    background-color: $primary;
+  }
+}
+
+.noUi-horizontal {
+  height: 10px;
+  margin-bottom: 30px;
+
+  .noUi-handle {
+    top: -8px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    outline: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// Reaction
+.reaction {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: -10px;
+
+  svg {
+    width: 34px;
+    height: 34px;
+    @include transition(transform .28s ease-in-out);
+  }
+
+  &-count {
+    position: relative;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-left: 5px;
+    font-size: $font-size-sm;
+    text-align: center;
+    background-color: $white;
+    border: 1px solid rgba($black, .2);
+    @include border-radius(3px);
+
+    @include media-breakpoint-down(sm) {
+      padding: 4px;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      top: 12px;
+      right: 100%;
+      width: 0;
+      height: 0;
+      content: " ";
+      border: solid transparent;
+    }
+
+    &::after {
+      margin-top: -5px;
+      border-width: 5px;
+      border-right-color: $white;
+    }
+
+    &::before {
+      margin-top: -6px;
+      border-width: 6px;
+      border-right-color: rgb(175, 175, 175);
+    }
+  }
+
+  .btn-link {
+    padding: 0 5px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 3px;
+    }
+
+    &:hover {
+      color: $body-color;
+
+      svg {
+        transform: rotate(360deg);
+      }
+
+      .reaction-count {
+        border: 1px solid rgba($black, .3);
+
+        &::before {
+          border-right-color: rgb(124, 124, 124);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    flex-wrap: wrap;
+  }
+}
